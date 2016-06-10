@@ -1,0 +1,38 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="Evius.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    shell:SystemTray.IsVisible="True"
+    shell:SystemTray.ForegroundColor="#68217a"
+    shell:SystemTray.BackgroundColor="White">
+
+    <Grid x:Name="LayoutRoot">
+        <StackPanel Background="#68217a">
+            <StackPanel Height="618">
+                <Image Source="/Images/All/logo_white.png" Width="150" Height="150" Margin="0,200,0,0" />
+            </StackPanel>
+            <StackPanel>
+                <HyperlinkButton Click="View_LoginPage" Style="{StaticResource HyperlinkButtonStyleFixed}" Margin="0,0,0,2">
+                    <StackPanel Background="White" Width="480" Margin="-12,0,-12,0">
+                        <TextBlock Text="{Binding Path=LocalizedResources.TextMainLogin, Source={StaticResource LocalizedStrings}}" FontSize="50" Foreground="Black" Margin="20,0,0,5" />
+                    </StackPanel>
+                </HyperlinkButton>
+                <HyperlinkButton Click="View_RegistrationPage" Margin="0,0,0,0" Style="{StaticResource HyperlinkButtonStyleFixed}">
+                    <StackPanel Background="#202020" Width="480" Margin="-12,0,-12,0">
+                        <TextBlock Text="{Binding Path=LocalizedResources.TextMainRegistration, Source={StaticResource LocalizedStrings}}" FontSize="50" Foreground="White" Margin="20,0,0,5" />
+                    </StackPanel>
+                </HyperlinkButton>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+
+</phone:PhoneApplicationPage>

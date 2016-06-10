@@ -1,0 +1,559 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="MessageEmailUsed" xml:space="preserve">
+    <value>email already in use</value>
+    <comment>Code: 0x000015</comment>
+  </data>
+  <data name="MessageInvalidData" xml:space="preserve">
+    <value>invalid data</value>
+    <comment>Code: 0x000002</comment>
+  </data>
+  <data name="MessageNoData" xml:space="preserve">
+    <value>Check your internet connection settings</value>
+  </data>
+  <data name="MessageNoInternet" xml:space="preserve">
+    <value>no internet connection available</value>
+  </data>
+  <data name="MessageRegistrationOK" xml:space="preserve">
+    <value>registration was successful!</value>
+    <comment>Code: 0x000017</comment>
+  </data>
+  <data name="MessageUserAdd" xml:space="preserve">
+    <value>you are now following this user</value>
+    <comment>Code: 0x000004</comment>
+  </data>
+  <data name="MessageUsernameUsed" xml:space="preserve">
+    <value>username used</value>
+    <comment>Code: 0x000016</comment>
+  </data>
+  <data name="MessageUserRemove" xml:space="preserve">
+    <value>you are no longer following this user</value>
+    <comment>Code: 0x000003</comment>
+  </data>
+  <data name="ResourceFlowDirection" xml:space="preserve">
+    <value>LeftToRight</value>
+  </data>
+  <data name="ResourceLanguage" xml:space="preserve">
+    <value>en</value>
+  </data>
+  <data name="TextLoginEmail" xml:space="preserve">
+    <value>email</value>
+  </data>
+  <data name="TextLoginLogin" xml:space="preserve">
+    <value>login</value>
+  </data>
+  <data name="TextLoginPassword" xml:space="preserve">
+    <value>password</value>
+  </data>
+  <data name="TextLoginSignIn" xml:space="preserve">
+    <value>sign in</value>
+  </data>
+  <data name="TextLoginWelcome" xml:space="preserve">
+    <value>welcome to Evius</value>
+  </data>
+  <data name="TextMainLogin" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="TextMainRegistration" xml:space="preserve">
+    <value>Registration</value>
+  </data>
+  <data name="TextProfileBornDate" xml:space="preserve">
+    <value>birth date</value>
+  </data>
+  <data name="TextProfileEmail" xml:space="preserve">
+    <value>email</value>
+  </data>
+  <data name="TextProfileEventsFollower" xml:space="preserve">
+    <value>followers</value>
+  </data>
+  <data name="TextProfileEventsWelcome" xml:space="preserve">
+    <value>attented events</value>
+    <comment>mettiamo "Username's events"?</comment>
+  </data>
+  <data name="TextProfileProfile" xml:space="preserve">
+    <value>Profile</value>
+  </data>
+  <data name="TextProfileTelephone" xml:space="preserve">
+    <value>phone number</value>
+  </data>
+  <data name="TextProfileTitle" xml:space="preserve">
+    <value>title</value>
+  </data>
+  <data name="TextProfileUsername" xml:space="preserve">
+    <value>username</value>
+  </data>
+  <data name="TextProfileWelcome" xml:space="preserve">
+    <value>informations</value>
+  </data>
+  <data name="TextRegistrationCreate" xml:space="preserve">
+    <value>create new account</value>
+  </data>
+  <data name="TextRegistrationEmail" xml:space="preserve">
+    <value>email</value>
+  </data>
+  <data name="TextRegistrationEmailRepeat" xml:space="preserve">
+    <value>repeat email</value>
+  </data>
+  <data name="TextRegistrationPassword" xml:space="preserve">
+    <value>password</value>
+  </data>
+  <data name="TextRegistrationRegistration" xml:space="preserve">
+    <value>Registration</value>
+  </data>
+  <data name="TextRegistrationUsername" xml:space="preserve">
+    <value>username</value>
+  </data>
+  <data name="TextRegistrationWelcome" xml:space="preserve">
+    <value>ready to join?</value>
+  </data>
+  <data name="MessageSettingsDisable" xml:space="preserve">
+    <value>settings disable</value>
+    <comment>Code: 0x000014</comment>
+  </data>
+  <data name="MessageSettingsEnable" xml:space="preserve">
+    <value>settings enable</value>
+    <comment>Code: 0x000013</comment>
+  </data>
+  <data name="TextSettingsAbout" xml:space="preserve">
+    <value>about</value>
+  </data>
+  <data name="TextSettingsBornDate" xml:space="preserve">
+    <value>date of birth</value>
+  </data>
+  <data name="TextSettingsEmail" xml:space="preserve">
+    <value>email address</value>
+  </data>
+  <data name="TextSettingsPassword" xml:space="preserve">
+    <value>password</value>
+  </data>
+  <data name="TextSettingsPasswordInfo" xml:space="preserve">
+    <value>tap to change your password</value>
+  </data>
+  <data name="TextSettingsSettings" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="TextSettingsUsername" xml:space="preserve">
+    <value>username</value>
+  </data>
+  <data name="TextSettingsWelcome" xml:space="preserve">
+    <value>user informations</value>
+  </data>
+  <data name="MessageChangeBornDateOk" xml:space="preserve">
+    <value>birth date succesfully updated!</value>
+    <comment>Code: 0x000021</comment>
+  </data>
+  <data name="MessageChangePasswordNewError" xml:space="preserve">
+    <value>invalid password confirmation</value>
+    <comment>Code: 0x000019</comment>
+  </data>
+  <data name="MessageChangePasswordOk" xml:space="preserve">
+    <value>password successfully updated!</value>
+    <comment>Code: 0x000020</comment>
+  </data>
+  <data name="MessageChangePasswordOldError" xml:space="preserve">
+    <value>wrong previous password</value>
+    <comment>Code: 0x000018</comment>
+  </data>
+  <data name="MessageChangeTelephoneOk" xml:space="preserve">
+    <value>telephone number succesfully updated!</value>
+    <comment>Code: 0x000022</comment>
+  </data>
+  <data name="TextSettingsAdvanceWelcome" xml:space="preserve">
+    <value>advanced settings</value>
+  </data>
+  <data name="TextSettingsBasicWelcome" xml:space="preserve">
+    <value>basic settings</value>
+  </data>
+  <data name="TextSettingsBornDateInfo" xml:space="preserve">
+    <value>do you want to show your date of birth info in your profile info?</value>
+  </data>
+  <data name="TextSettingsChange" xml:space="preserve">
+    <value>update</value>
+  </data>
+  <data name="TextSettingsEmailInfo" xml:space="preserve">
+    <value>do you want to show your email address in your profile info?</value>
+  </data>
+  <data name="TextSettingsNewPassword" xml:space="preserve">
+    <value>new password</value>
+  </data>
+  <data name="TextSettingsNewTelephone" xml:space="preserve">
+    <value>new phone number</value>
+  </data>
+  <data name="TextSettingsNotification" xml:space="preserve">
+    <value>notifications</value>
+  </data>
+  <data name="TextSettingsNotificationInfo" xml:space="preserve">
+    <value>allow Evius to send you push notifications?</value>
+  </data>
+  <data name="TextSettingsOldPassword" xml:space="preserve">
+    <value>old password</value>
+  </data>
+  <data name="TextSettingsPosition" xml:space="preserve">
+    <value>location</value>
+  </data>
+  <data name="TextSettingsPositionInfo" xml:space="preserve">
+    <value>allow Evius to access your location?</value>
+  </data>
+  <data name="TextSettingsPrivacy" xml:space="preserve">
+    <value>Privacy Statement</value>
+  </data>
+  <data name="TextSettingsRepeatNewPassword" xml:space="preserve">
+    <value>repeat new password</value>
+  </data>
+  <data name="TextSettingsTelephone" xml:space="preserve">
+    <value>phone number</value>
+  </data>
+  <data name="TextSettingsTelephoneInfo" xml:space="preserve">
+    <value>do you want to show your phone number in your profile info?</value>
+  </data>
+  <data name="TextSettingsTerms" xml:space="preserve">
+    <value>Terms and Conditions</value>
+  </data>
+  <data name="MessageNoReady" xml:space="preserve">
+    <value>Not yet implemented.</value>
+  </data>
+  <data name="TextHomeActivity" xml:space="preserve">
+    <value>Activities</value>
+  </data>
+  <data name="TextHomeClan" xml:space="preserve">
+    <value>Clans</value>
+  </data>
+  <data name="TextHomeEvents" xml:space="preserve">
+    <value>Events</value>
+  </data>
+  <data name="TextHomeEventsFollowedByUser" xml:space="preserve">
+    <value>will join the event</value>
+  </data>
+  <data name="TextHomeEventsFollower" xml:space="preserve">
+    <value>followers</value>
+  </data>
+  <data name="TextHomeEventsWelcome" xml:space="preserve">
+    <value>your events</value>
+  </data>
+  <data name="TextHomeHome" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="TextHomeLogout" xml:space="preserve">
+    <value>Logout</value>
+  </data>
+  <data name="TextHomeMessages" xml:space="preserve">
+    <value>Messages</value>
+  </data>
+  <data name="TextHomeNoActivity" xml:space="preserve">
+    <value>No activities to display here :(</value>
+  </data>
+  <data name="TextHomeNoEvents" xml:space="preserve">
+    <value>You haven't joined any event, yet.</value>
+  </data>
+  <data name="TextHomeNoNotification" xml:space="preserve">
+    <value>No notifications to display here :(</value>
+  </data>
+  <data name="TextHomeNotification" xml:space="preserve">
+    <value>Notifications</value>
+  </data>
+  <data name="TextHomeNotificationWelcome" xml:space="preserve">
+    <value>your notifications</value>
+  </data>
+  <data name="TextHomeProfile" xml:space="preserve">
+    <value>Profile</value>
+  </data>
+  <data name="TextHomeReportBug" xml:space="preserve">
+    <value>Report a bug</value>
+  </data>
+  <data name="TextHomeSettings" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="TextHomeTravelManage" xml:space="preserve">
+    <value>Travels management</value>
+  </data>
+  <data name="TextHomeUserFollowYou" xml:space="preserve">
+    <value>started following you</value>
+  </data>
+  <data name="TextHomeWelcome" xml:space="preserve">
+    <value>friends' activities</value>
+  </data>
+  <data name="TextProfileUsernameTitle1" xml:space="preserve">
+    <value>carried</value>
+  </data>
+  <data name="TextProfileUsernameTitle2" xml:space="preserve">
+    <value>driver</value>
+  </data>
+  <data name="MessageEventAdd" xml:space="preserve">
+    <value>you are now joining this event</value>
+    <comment>Code: 0x000006</comment>
+  </data>
+  <data name="MessageEventRemove" xml:space="preserve">
+    <value>you are no longer joining this event</value>
+    <comment>Code: 0x000005</comment>
+  </data>
+  <data name="MessageModifyAnOffertError" xml:space="preserve">
+    <value>error</value>
+    <comment>Code: 0x000010</comment>
+  </data>
+  <data name="MessageModifyAnOffertSaved" xml:space="preserve">
+    <value>saved</value>
+    <comment>Code: 0x000009</comment>
+  </data>
+  <data name="MessageRequiredOnOffertAdd" xml:space="preserve">
+    <value>request added</value>
+    <comment>Code: 0x000007</comment>
+  </data>
+  <data name="MessageRequiredOnOffertRemove" xml:space="preserve">
+    <value>request removed</value>
+    <comment>Code: 0x000008</comment>
+  </data>
+  <data name="TextDetailsEventCity" xml:space="preserve">
+    <value>location</value>
+  </data>
+  <data name="TextDetailsEventEndDate" xml:space="preserve">
+    <value>end time:</value>
+  </data>
+  <data name="TextDetailsEventEvent" xml:space="preserve">
+    <value>Event</value>
+  </data>
+  <data name="TextDetailsEventEventsFollower" xml:space="preserve">
+    <value>followers</value>
+  </data>
+  <data name="TextDetailsEventFollow" xml:space="preserve">
+    <value>join</value>
+  </data>
+  <data name="TextDetailsEventFrom" xml:space="preserve">
+    <value>from: </value>
+  </data>
+  <data name="TextDetailsEventInfo" xml:space="preserve">
+    <value>info: </value>
+  </data>
+  <data name="TextDetailsEventInformation" xml:space="preserve">
+    <value>informations</value>
+  </data>
+  <data name="TextDetailsEventLimit" xml:space="preserve">
+    <value>available car seats</value>
+  </data>
+  <data name="TextDetailsEventMakeRequest" xml:space="preserve">
+    <value>request ride</value>
+  </data>
+  <data name="TextDetailsEventNoFollow" xml:space="preserve">
+    <value>decline</value>
+  </data>
+  <data name="TextDetailsEventNoRequest" xml:space="preserve">
+    <value>no available rides</value>
+  </data>
+  <data name="TextDetailsEventRemoveRequest" xml:space="preserve">
+    <value>remove request</value>
+  </data>
+  <data name="TextDetailsEventRequired" xml:space="preserve">
+    <value>require a ride</value>
+  </data>
+  <data name="TextDetailsEventSave" xml:space="preserve">
+    <value>save</value>
+  </data>
+  <data name="TextDetailsEventStartDate" xml:space="preserve">
+    <value>start time:</value>
+  </data>
+  <data name="TextDetailsOffer" xml:space="preserve">
+    <value>offer a ride</value>
+  </data>
+  <data name="TextManageDriveConfirmed" xml:space="preserve">
+    <value>confirmed</value>
+  </data>
+  <data name="TextManageDriveDate" xml:space="preserve">
+    <value>date: </value>
+  </data>
+  <data name="TextManageDriveDrive" xml:space="preserve">
+    <value>Rides</value>
+  </data>
+  <data name="TextManageDriveEventName" xml:space="preserve">
+    <value>event name: </value>
+  </data>
+  <data name="TextManageDriveNoOffered" xml:space="preserve">
+    <value>no rides available</value>
+  </data>
+  <data name="TextManageDriveNoRequest" xml:space="preserve">
+    <value>no request</value>
+  </data>
+  <data name="TextManageDriveRemoveRequest" xml:space="preserve">
+    <value>remove request</value>
+  </data>
+  <data name="TextManageDriveRequestWelcome" xml:space="preserve">
+    <value>your requests</value>
+  </data>
+  <data name="TextManageDriveStatus" xml:space="preserve">
+    <value>status: </value>
+  </data>
+  <data name="TextManageDriveWaiting" xml:space="preserve">
+    <value>waiting</value>
+  </data>
+  <data name="TextManageDriveWelcome" xml:space="preserve">
+    <value>your rides</value>
+  </data>
+  <data name="MessageUserStatusChange" xml:space="preserve">
+    <value>you change the status of this user</value>
+    <comment>Code: 0x000011</comment>
+  </data>
+  <data name="MessageUserStatusChangeError" xml:space="preserve">
+    <value>you cannot change the status of this user</value>
+    <comment>Code: 0x000012</comment>
+  </data>
+  <data name="TextAddEventAddEvent" xml:space="preserve">
+    <value>New Event</value>
+  </data>
+  <data name="TextAddEventEmail" xml:space="preserve">
+    <value>e-mail</value>
+  </data>
+  <data name="TextAddEventPassword" xml:space="preserve">
+    <value>password</value>
+  </data>
+  <data name="TextAddEventSignIn" xml:space="preserve">
+    <value>sign in</value>
+  </data>
+  <data name="TextAddEventWelcome" xml:space="preserve">
+    <value>select source</value>
+  </data>
+  <data name="TextHomeAddEvent" xml:space="preserve">
+    <value>+ add event</value>
+  </data>
+  <data name="TextOfferAccept" xml:space="preserve">
+    <value>accept</value>
+  </data>
+  <data name="TextOfferAccepted" xml:space="preserve">
+    <value>accepted</value>
+  </data>
+  <data name="TextOfferNoUser" xml:space="preserve">
+    <value>no users in this list</value>
+  </data>
+  <data name="TextOfferOffer" xml:space="preserve">
+    <value>Rides requests</value>
+  </data>
+  <data name="TextOfferRefujed" xml:space="preserve">
+    <value>refused</value>
+  </data>
+  <data name="TextOfferRemove" xml:space="preserve">
+    <value>remove</value>
+  </data>
+  <data name="TextOfferSendMessage" xml:space="preserve">
+    <value>send message</value>
+  </data>
+  <data name="TextOfferWaiting" xml:space="preserve">
+    <value>waiting</value>
+  </data>
+  <data name="TextProfileNoEvents" xml:space="preserve">
+    <value>no events</value>
+  </data>
+</root>

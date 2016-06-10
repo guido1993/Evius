@@ -1,0 +1,140 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="Evius.Views.ProfilePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local="clr-namespace:evius"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True"
+    shell:SystemTray.ForegroundColor="#68217a"
+    shell:SystemTray.BackgroundColor="White">
+
+    <Grid x:Name="LayoutRoot">
+        <Grid.Background>
+            <ImageBrush ImageSource="../Images/All/background_over.png" />
+        </Grid.Background>
+        <phone:Panorama Name="box_panorama" Visibility="Collapsed" SelectionChanged="box_panorama_SelectionChanged">
+            <phone:Panorama.Background>
+                <ImageBrush ImageSource="../Images/All/background.png" />
+            </phone:Panorama.Background>
+
+            <phone:PanoramaItem>
+                <phone:PanoramaItem.Header>
+                    <StackPanel>
+                        <TextBlock Text="{Binding Path=LocalizedResources.TextProfileProfile, Source={StaticResource LocalizedStrings}}" Foreground="White" FontWeight="Black" FontSize="50" />
+                        <TextBlock Text="{Binding Path=LocalizedResources.TextProfileWelcome, Source={StaticResource LocalizedStrings}}" Foreground="White" FontSize="20" />
+                    </StackPanel>
+                </phone:PanoramaItem.Header>
+                <StackPanel Height="660" Margin="-12,-22,-0,0" VerticalAlignment="Top">
+                    <ScrollViewer Height="660">
+                        <StackPanel>
+                            <StackPanel Margin="0,20,0,0">
+                                <StackPanel Orientation="Horizontal">
+                                    <Border Background="#ddd" Width="220" Height="220" CornerRadius="110" Margin="106,0,0,0">
+                                        <Border Width="200" Height="200" CornerRadius="100">
+                                            <Border.Background>
+                                                <ImageBrush x:Name="box_image" />
+                                            </Border.Background>
+                                        </Border>
+                                    </Border>
+                                    <StackPanel Width="106" VerticalAlignment="Top">
+                                        <HyperlinkButton Click="Click_Action" HorizontalAlignment="Right" Style="{StaticResource HyperlinkButtonStyle}">
+                                            <Border Name="box_action" Background="#68217a" Width="60" Height="60" Margin="-12,0,-12,0">
+                                                <Image Name="box_action_inner" Source="/Images/All/icon_add.png" />
+                                            </Border>
+                                        </HyperlinkButton>
+                                    </StackPanel>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal" Margin="0,10,0,0" HorizontalAlignment="Center">
+                                    <Image Name="box_rating_1" Source="/Images/All/star_empty.png" Height="40" />
+                                    <Image Name="box_rating_2" Source="/Images/All/star_empty.png" Height="40" Margin="10,0,10,0" />
+                                    <Image Name="box_rating_3" Source="/Images/All/star_empty.png" Height="40" />
+                                    <TextBlock Name="box_rating_number" Foreground="#202020" FontSize="25" VerticalAlignment="Center" Margin="20,0,0,0"/>
+                                </StackPanel>
+                            </StackPanel>
+                            <StackPanel Margin="0,20,0,0">
+                                <TextBlock Name="box_msg" Visibility="Collapsed" />
+                                <TextBlock Name="box_id" Visibility="Collapsed" />
+                                <TextBlock Name="box_username" Foreground="Black" FontSize="25" HorizontalAlignment="Center" />
+                                <TextBlock Text="{Binding Path=LocalizedResources.TextProfileUsername, Source={StaticResource LocalizedStrings}}" Foreground="#212121" FontSize="15" Margin="0,-5,0,0" HorizontalAlignment="Center" />
+                                <TextBlock Name="box_title" Foreground="Black" FontSize="25" HorizontalAlignment="Center" />
+                                <TextBlock Text="{Binding Path=LocalizedResources.TextProfileTitle, Source={StaticResource LocalizedStrings}}" Foreground="#212121" FontSize="15" Margin="0,-5,0,0" HorizontalAlignment="Center" />
+                                <Border Background="#ddd" Width="250" Height="1" HorizontalAlignment="Center" Margin="0,10,0,10" />
+                                <StackPanel Name="box_email_view">
+                                    <TextBlock Name="box_email" Foreground="Black" FontSize="25" HorizontalAlignment="Center" />
+                                    <TextBlock Text="{Binding Path=LocalizedResources.TextProfileEmail, Source={StaticResource LocalizedStrings}}" Foreground="#212121" FontSize="15" Margin="0,-5,0,0" HorizontalAlignment="Center" />
+                                </StackPanel>
+                                <StackPanel Name="box_born_view">
+                                        <TextBlock Name="box_born" Foreground="Black" FontSize="25" HorizontalAlignment="Center" />
+                                        <TextBlock Text="{Binding Path=LocalizedResources.TextProfileBornDate, Source={StaticResource LocalizedStrings}}" Foreground="#212121" FontSize="15" Margin="0,-5,0,0" HorizontalAlignment="Center" />
+                                    </StackPanel>
+                                <StackPanel Name="box_telephone_view">
+                                    <TextBlock Name="box_telephone" Foreground="Black" FontSize="25" HorizontalAlignment="Center" />
+                                    <TextBlock Text="{Binding Path=LocalizedResources.TextProfileTelephone, Source={StaticResource LocalizedStrings}}" Foreground="#212121" FontSize="15" Margin="0,-5,0,0" HorizontalAlignment="Center" />
+                                </StackPanel>
+                            </StackPanel>
+                        </StackPanel>
+                    </ScrollViewer>
+                </StackPanel>
+            </phone:PanoramaItem>
+
+            <phone:PanoramaItem>
+                <phone:PanoramaItem.Header>
+                    <StackPanel>
+                        <TextBlock Text="" FontWeight="Black" FontSize="50" />
+                        <TextBlock Text="{Binding Path=LocalizedResources.TextProfileEventsWelcome, Source={StaticResource LocalizedStrings}}" Foreground="White" FontSize="20" />
+                    </StackPanel>
+                </phone:PanoramaItem.Header>
+                <StackPanel Height="660" Margin="-12,-22,-0,0" VerticalAlignment="Top">
+                    <ListBox Name="box_event" Height="640" Margin="0,20,0,0">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <local:TemplateSelector Content="{Binding}">
+                                    <local:TemplateSelector.Item>
+                                        <DataTemplate>
+                                            <HyperlinkButton Click="View_DetailsEventPage" CommandParameter="{Binding Id}" Style="{StaticResource HyperlinkButtonStyle}" Margin="20,0,20,10">
+                                                <StackPanel Orientation="Horizontal" Margin="-12,0,-12,10">
+                                                    <StackPanel Width="392" Height="150">
+                                                        <StackPanel.Background>
+                                                            <ImageBrush ImageSource="{Binding Photo}" />
+                                                        </StackPanel.Background>
+                                                        <StackPanel Background="#68217a" HorizontalAlignment="Right" Margin="0,92,-5,0">
+                                                            <StackPanel Orientation="Horizontal" Margin="10,5,10,5">
+                                                                <TextBlock Text="{Binding Follower}" Foreground="White" FontWeight="Bold" Margin="0,0,5,0" />
+                                                                <TextBlock Text="{Binding Path=LocalizedResources.TextProfileEventsFollower, Source={StaticResource LocalizedStrings}}" Foreground="White" />
+                                                            </StackPanel>
+                                                        </StackPanel>
+                                                    </StackPanel>
+                                                </StackPanel>
+                                            </HyperlinkButton>
+                                        </DataTemplate>
+                                    </local:TemplateSelector.Item>
+                                    <local:TemplateSelector.Return>
+                                        <DataTemplate>
+                                            <StackPanel Orientation="Horizontal" Margin="20,0,20,10">
+                                                <TextBlock Width="392" Text="{Binding Path=LocalizedResources.TextProfileNoEvents, Source={StaticResource LocalizedStrings}}" TextAlignment="Center" Foreground="Black" />
+                                            </StackPanel>
+                                        </DataTemplate>
+                                    </local:TemplateSelector.Return>
+                                </local:TemplateSelector>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </StackPanel>
+            </phone:PanoramaItem>
+
+        </phone:Panorama>
+        <StackPanel Name="box_loading" Visibility="Collapsed">
+            <ProgressBar FlowDirection="LeftToRight" IsIndeterminate="True" Height="5" Foreground="White"/>
+        </StackPanel>
+
+    </Grid>
+
+</phone:PhoneApplicationPage>

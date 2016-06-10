@@ -1,0 +1,177 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="Evius.Views.SettingsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    xmlns:telerikPrimitives="clr-namespace:Telerik.Windows.Controls;assembly=Telerik.Windows.Controls.Primitives"
+    xmlns:telerikInput="clr-namespace:Telerik.Windows.Controls;assembly=Telerik.Windows.Controls.Input"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True"
+    shell:SystemTray.ForegroundColor="#68217a"
+    shell:SystemTray.BackgroundColor="White">
+
+    <Grid x:Name="LayoutRoot">
+        <Grid.Background>
+            <ImageBrush ImageSource="../Images/All/background_over.png" />
+        </Grid.Background>
+        <phone:Panorama Name="box_panorama" Visibility="Collapsed" SelectionChanged="box_panorama_SelectionChanged">
+            <phone:Panorama.Background>
+                <ImageBrush ImageSource="../Images/All/background.png" />
+            </phone:Panorama.Background>
+            
+            <phone:PanoramaItem>
+                <phone:PanoramaItem.Header>
+                    <StackPanel>
+                        <TextBlock Text="{Binding Path=LocalizedResources.TextSettingsSettings, Source={StaticResource LocalizedStrings}}" Foreground="White" FontWeight="Black" FontSize="50" />
+                        <TextBlock Text="{Binding Path=LocalizedResources.TextSettingsWelcome, Source={StaticResource LocalizedStrings}}" Foreground="White"  FontSize="20" />
+                    </StackPanel>
+                </phone:PanoramaItem.Header>
+                <StackPanel Height="660" Margin="-12,-22,0,0" VerticalAlignment="Top">
+                    <StackPanel Margin="0,0,0,10">
+                        <TextBlock Text="{Binding Path=LocalizedResources.TextSettingsUsername, Source={StaticResource LocalizedStrings}}" FontSize="25" Foreground="#999" Margin="20,20,0,0"/>
+                        <TextBlock Name="box_username" FontSize="17" Foreground="#999" Margin="20,0,0,0" />
+                    </StackPanel>
+                    <StackPanel Margin="0,0,0,10" Tap="View_Box_Password">
+                        <TextBlock Text="{Binding Path=LocalizedResources.TextSettingsPassword, Source={StaticResource LocalizedStrings}}" FontSize="25" Foreground="Black" Margin="20,20,0,0" />
+                        <TextBlock Text="{Binding Path=LocalizedResources.TextSettingsPasswordInfo, Source={StaticResource LocalizedStrings}}" FontSize="15" Foreground="Black" Margin="20,0,0,0" />
+                    </StackPanel>
+                    <StackPanel Margin="0,0,0,10">
+                        <TextBlock Text="{Binding Path=LocalizedResources.TextSettingsEmail, Source={StaticResource LocalizedStrings}}" FontSize="25" Foreground="#999" Margin="20,20,0,0" />
+                        <TextBlock Name="box_email" FontSize="15" Foreground="#999" Margin="20,0,0,0" />
+                    </StackPanel>
+                    <StackPanel Margin="0,0,0,10" Tap="View_Box_Born">
+                        <TextBlock Text="{Binding Path=LocalizedResources.TextSettingsBornDate, Source={StaticResource LocalizedStrings}}" FontSize="25" Foreground="Black" Margin="20,20,0,0" />
+                        <TextBlock Name="box_born" FontSize="15" Foreground="Black" Margin="20,0,0,0" />
+                    </StackPanel>
+                    <StackPanel Margin="0,0,0,10" Tap="View_Box_Telephone">
+                        <TextBlock Text="{Binding Path=LocalizedResources.TextSettingsTelephone, Source={StaticResource LocalizedStrings}}" FontSize="25" Foreground="Black" Margin="20,20,0,0" />
+                        <TextBlock Name="box_telephone" FontSize="15" Foreground="Black" Margin="20,0,0,0" />
+                    </StackPanel>
+                    <StackPanel Margin="0,0,0,10" Tap="View_Box_About">
+                        <TextBlock Text="{Binding Path=LocalizedResources.TextSettingsAbout, Source={StaticResource LocalizedStrings}}" FontSize="25" Foreground="Black" Margin="20,20,0,0"/>
+                        <TextBlock Text="v. 1.0.0.0" FontSize="15" Foreground="Black" Margin="20,0,0,0" />
+                    </StackPanel>
+                    <telerikPrimitives:RadPickerBox Background="White" x:Name="box_change" Width="0" Height="0" IsFullScreen="True">
+                        <StackPanel Background="White">
+                            <StackPanel Name="box_password_change" Margin="20,20,20,0" Visibility="Collapsed">
+                                <TextBlock Text="{Binding Path=LocalizedResources.TextSettingsOldPassword, Source={StaticResource LocalizedStrings}}" Foreground="Black" />
+                                <PasswordBox Name="box_old_password" Padding="2,8,2,8" Margin="-12,0,-12,0" Style="{StaticResource PasswordBoxStyle}" />
+                                <TextBlock Text="{Binding Path=LocalizedResources.TextSettingsNewPassword, Source={StaticResource LocalizedStrings}}" Foreground="Black" />
+                                <PasswordBox Name="box_new_password" Padding="2,8,2,8" Margin="-12,0,-12,0" Style="{StaticResource PasswordBoxStyle}" />
+                                <TextBlock Text="{Binding Path=LocalizedResources.TextSettingsRepeatNewPassword, Source={StaticResource LocalizedStrings}}" Foreground="Black" />
+                                <PasswordBox Name="box_repeat_new_password" Padding="2,8,2,8" Margin="-12,0,-12,0" Style="{StaticResource PasswordBoxStyle}" />
+                                <HyperlinkButton Click="Click_Change_Password" Style="{StaticResource HyperlinkButtonStyleFixed}" Margin="0,20,0,0">
+                                    <Border Background="#68217a" Width="440" Height="70" Margin="-12,0,-12,0">
+                                        <TextBlock Text="{Binding Path=LocalizedResources.TextSettingsChange, Source={StaticResource LocalizedStrings}}" TextAlignment="Center" Foreground="White" Margin="20" />
+                                    </Border>
+                                </HyperlinkButton>
+                            </StackPanel>
+                            <StackPanel Name="box_born_change" Margin="20,20,20,0" Visibility="Collapsed">
+                                <telerikInput:RadDateSelector x:Name="box_date" Style="{StaticResource DateSelectorStyle}" Margin="0,100,0,0" />
+                                <HyperlinkButton Click="Click_Change_Born" Style="{StaticResource HyperlinkButtonStyleFixed}" Margin="0,20,0,0">
+                                    <Border Background="#68217a" Width="440" Height="70" Margin="-12,0,-12,0">
+                                        <TextBlock Text="{Binding Path=LocalizedResources.TextSettingsChange, Source={StaticResource LocalizedStrings}}" TextAlignment="Center" Foreground="White" Margin="20" />
+                                    </Border>
+                                </HyperlinkButton>
+                            </StackPanel>
+                            <StackPanel Name="box_telephone_change" Margin="20,20,20,0" Visibility="Collapsed">
+                                <TextBlock Text="{Binding Path=LocalizedResources.TextSettingsNewTelephone, Source={StaticResource LocalizedStrings}}" Foreground="Black" />
+                                <TextBox Name="box_new_telephone" Padding="2,8,2,8" Margin="-12,0,-12,0" Style="{StaticResource TextBoxStyle}" />
+                                <HyperlinkButton Click="Click_Change_Telephone" Style="{StaticResource HyperlinkButtonStyleFixed}" Margin="0,20,0,0">
+                                    <Border Background="#68217a" Width="440" Height="70" Margin="-12,0,-12,0">
+                                        <TextBlock Text="{Binding Path=LocalizedResources.TextSettingsChange, Source={StaticResource LocalizedStrings}}" TextAlignment="Center" Foreground="White" Margin="20" />
+                                    </Border>
+                                </HyperlinkButton>
+                            </StackPanel>
+                            <StackPanel Name="box_about_change" Margin="20,20,20,0" Visibility="Collapsed">
+                                <TextBlock Text="{Binding Path=LocalizedResources.TextSettingsPrivacy, Source={StaticResource LocalizedStrings}}" FontSize="25" Foreground="Black" />
+                                <TextBlock Text="{Binding Path=LocalizedResources.TextSettingsTerms, Source={StaticResource LocalizedStrings}}" FontSize="25" Foreground="Black" Margin="0,20,0,0" />
+                            </StackPanel>
+                        </StackPanel>
+                    </telerikPrimitives:RadPickerBox>
+                </StackPanel>
+            </phone:PanoramaItem>
+
+            <phone:PanoramaItem>
+                <phone:PanoramaItem.Header>
+                    <StackPanel>
+                        <TextBlock Text="" FontWeight="Black" FontSize="50" />
+                        <TextBlock Text="{Binding Path=LocalizedResources.TextSettingsBasicWelcome, Source={StaticResource LocalizedStrings}}" FontSize="20" />
+                    </StackPanel>
+                </phone:PanoramaItem.Header>
+                <StackPanel Height="660" Margin="-12,-22,0,0" VerticalAlignment="Top">
+                    <ScrollViewer Height="660">
+                        <StackPanel>
+                            <StackPanel Margin="20,20,20,0">
+                                <TextBlock Text="{Binding Path=LocalizedResources.TextSettingsBornDate, Source={StaticResource LocalizedStrings}}" FontSize="25" Foreground="Black" />
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Width="270" Text="{Binding Path=LocalizedResources.TextSettingsBornDateInfo, Source={StaticResource LocalizedStrings}}" TextWrapping="Wrap" Foreground="Black" FontSize="15"/>
+                                    <toolkit:ToggleSwitch Name="ChangeViewBorn" Width="122" Background="White" Content="" IsChecked="False" Tap="Click_ToggleSwitch" SwitchForeground="#68217a" />
+                                </StackPanel>
+                            </StackPanel>
+                            <StackPanel Margin="20,0,20,0">
+                                <TextBlock Text="{Binding Path=LocalizedResources.TextSettingsEmail, Source={StaticResource LocalizedStrings}}" FontSize="25" Foreground="Black" />
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Width="270" Text="{Binding Path=LocalizedResources.TextSettingsEmailInfo, Source={StaticResource LocalizedStrings}}" TextWrapping="Wrap" Foreground="Black"  FontSize="15"/>
+                                    <toolkit:ToggleSwitch Name="ChangeViewEmail" Width="122" Background="White" Content="" IsChecked="False" Tap="Click_ToggleSwitch" SwitchForeground="#68217a"/>
+                                </StackPanel>
+                            </StackPanel>
+                            <StackPanel Margin="20,0,20,0">
+                                <TextBlock Text="{Binding Path=LocalizedResources.TextSettingsTelephone, Source={StaticResource LocalizedStrings}}" FontSize="25" Foreground="Black" />
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Width="270" Text="{Binding Path=LocalizedResources.TextSettingsTelephoneInfo, Source={StaticResource LocalizedStrings}}" TextWrapping="Wrap" Foreground="Black"  FontSize="15"/>
+                                    <toolkit:ToggleSwitch Name="ChangeViewTelephone" Width="122" Background="White" Content="" IsChecked="False" Tap="Click_ToggleSwitch" SwitchForeground="#68217a"/>
+                                </StackPanel>
+                            </StackPanel>
+                        </StackPanel>
+                    </ScrollViewer>
+
+                </StackPanel>
+            </phone:PanoramaItem>
+
+            <phone:PanoramaItem>
+                <phone:PanoramaItem.Header>
+                    <StackPanel>
+                        <TextBlock Text="" FontWeight="Black" FontSize="50" />
+                        <TextBlock Text="{Binding Path=LocalizedResources.TextSettingsAdvanceWelcome, Source={StaticResource LocalizedStrings}}" FontSize="20" />
+                    </StackPanel>
+                </phone:PanoramaItem.Header>
+                <StackPanel Height="660" Margin="-12,-22,0,0" VerticalAlignment="Top">
+                    <ScrollViewer Height="660">
+                        <StackPanel>
+                            <StackPanel Margin="20,20,20,0">
+                                <TextBlock Text="{Binding Path=LocalizedResources.TextSettingsPosition, Source={StaticResource LocalizedStrings}}" FontSize="25" Foreground="Black"/>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Width="270" Text="{Binding Path=LocalizedResources.TextSettingsPositionInfo, Source={StaticResource LocalizedStrings}}" TextWrapping="Wrap" Foreground="Black" FontSize="15"/>
+                                    <toolkit:ToggleSwitch Name="SettingsPosition" Width="122" Background="White" Content="" IsChecked="False" Tap="Click_App_ToggleSwitch" SwitchForeground="#68217a" />
+                                </StackPanel>
+                            </StackPanel>
+                            <StackPanel Margin="20,0,20,0">
+                                <TextBlock Text="{Binding Path=LocalizedResources.TextSettingsNotification, Source={StaticResource LocalizedStrings}}" FontSize="25" Foreground="Black"/>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Width="270" Text="{Binding Path=LocalizedResources.TextSettingsNotificationInfo, Source={StaticResource LocalizedStrings}}" TextWrapping="Wrap" Foreground="Black" FontSize="15"/>
+                                    <toolkit:ToggleSwitch Name="SettingsNotification" Width="122" Background="White" Content="" IsChecked="False" Tap="Click_App_ToggleSwitch" SwitchForeground="#68217a" />
+                                </StackPanel>
+                            </StackPanel>
+                        </StackPanel>
+                    </ScrollViewer>
+
+                </StackPanel>
+            </phone:PanoramaItem>
+
+        </phone:Panorama>
+        <StackPanel Name="box_loading" Visibility="Collapsed">
+            <ProgressBar FlowDirection="LeftToRight" IsIndeterminate="True" Height="5" Foreground="White"/>
+        </StackPanel>
+        
+    </Grid>
+
+</phone:PhoneApplicationPage>
