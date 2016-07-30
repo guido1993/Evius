@@ -4,7 +4,7 @@ Evius is a Windows Phone 8.0 Silverlight app presented at Microsoft Imagine Cup 
 
 The social goal of Evius is actually to increase your own safety while travelling, especially by car. Would you like to drink tonight at the local club but none of your friends is willing to skip that either? Evius will allow you to find a safe (and sober) driver that will take you to the event and back home in maximum safety. 
 
-The app is fully localized in Italian and English.
+The app is fully localized in [b]Italian[/b] and English.
 
 At this link you can find the full documentation of the project: http://imgur.com/a/EwmuR
 
